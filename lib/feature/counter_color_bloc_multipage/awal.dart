@@ -28,7 +28,7 @@ class AwalPage extends StatelessWidget {
               ),
               RaisedButton(
                 onPressed: () {
-                  App.main.sailor.navigate(RouteConfig.CHANGECOUNTERCOLOR);
+                  App.main.sailor.navigate(RouteConfig.CHANGENUMBERBLOC);
                 },
                 child: Text("Change Number Here !"),
                 color: color,
