@@ -15,7 +15,7 @@ static const String HOME='/home';
 static const String CHANGECOLOR='/hitung'; 
 static const String COUNTMONEY='/count_money'; 
 static const String NUMBERBLOC='/number_bloc'; 
-static const String CHANGENUMBERBLOC='/count_money'; 
+static const String CHANGENUMBERBLOC='/change_number_bloc'; 
 
 
 

@@ -42,8 +42,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     App.main.sailor.navigate(RouteConfig.COUNTMONEY);
                   },
                 ),
-                RaisedButton(
-                  child: Text('Try BLOC'),
+                 RaisedButton(
+                 child: Text('Try BLOC'),
                   onPressed: () {
                     App.main.sailor.navigate(RouteConfig.NUMBERBLOC);
                   },
