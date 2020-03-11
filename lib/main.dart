@@ -1,9 +1,12 @@
+import 'package:enggarapps/feature/counter_color_bloc_multipage/bloc/counter_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:sailor/sailor.dart';
 import 'package:grpc/grpc.dart';
 import 'package:enggarapps/core/app.dart';
 import 'package:equinox/equinox.dart';
+import 'package:enggarapps/feature/counter_color_bloc_multipage/bloc/color_bloc.dart';
 
 Future<Null> main() async {
   GetIt.instance.registerSingleton<App>(
@@ -28,17 +31,25 @@ Future<Null> main() async {
   runApp(MyApp());
 }
 
-
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return EquinoxApp(
-      title: App.main.title,
-      theme: EqThemes.defaultDarkTheme,
-      navigatorKey: App.main.sailor.navigatorKey,
-      onGenerateRoute: App.main.sailor.generator(),
-    );
+    return MultiBlocProvider(
+        child: EquinoxApp(
+          title: App.main.title,
+          theme: EqThemes.defaultDarkTheme,
+          navigatorKey: App.main.sailor.navigatorKey,
+          onGenerateRoute: App.main.sailor.generator(),
+        ),
+        providers: [
+          BlocProvider<ColorBloc>(
+            create: (context) => ColorBloc(),
+          ),
+          BlocProvider<CounterBloc>(
+            create: (context) => CounterBloc(),
+          ),
+        ]);
   }
 }
 

@@ -36,6 +36,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     App.main.sailor.navigate(RouteConfig.CHANGECOLOR);
                   },
                 ),
+                RaisedButton(
+                  child: Text('Try Bloc'),
+                  onPressed: () {
+                    App.main.sailor.navigate(RouteConfig.COUNTERCOLOR);
+                  },
+                ),
               ],
             ),
           ),
