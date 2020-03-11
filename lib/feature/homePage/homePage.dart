@@ -1,6 +1,6 @@
 import 'package:enggarapps/config/route_config.dart';
 import 'package:enggarapps/core/app.dart';
-import 'package:enggarapps/feature/change_color/share_state.dart';
+import 'package:enggarapps/feature/share_state/share_state.dart';
 import 'package:flutter/material.dart';
 import 'package:equinox/equinox.dart' as eva;
 import 'package:provider/provider.dart';
@@ -34,6 +34,18 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Text('Change color background'),
                   onPressed: () {
                     App.main.sailor.navigate(RouteConfig.CHANGECOLOR);
+                  },
+                ),
+                RaisedButton(
+                  child: Text('Count Your Money'),
+                  onPressed: () {
+                    App.main.sailor.navigate(RouteConfig.COUNTMONEY);
+                  },
+                ),
+                RaisedButton(
+                  child: Text('Try BLOC'),
+                  onPressed: () {
+                    App.main.sailor.navigate(RouteConfig.NUMBERBLOC);
                   },
                 ),
               ],
